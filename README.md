@@ -23,9 +23,8 @@ This engine relies on advanced financial engineering concepts:
 - `src/execution/` : Risk management and optimal position sizing logic.
 - `notebooks/` : Monte Carlo simulations and Heatmap generations.
 
-## 🚀 Installation & Usage
 
-1. Clone the repository:
-```bash
-git clone [https://github.com/YOUR_USERNAME/propfirm-pricing-engine.git](https://github.com/YOUR_USERNAME/propfirm-pricing-engine.git)
-cd propfirm-pricing-engine
+
+## ⚠️ Disclaimer
+
+This project is strictly for quantitative research and educational purposes. Financial markets are stochastic, and past statistical edges do not guarantee future performance.
