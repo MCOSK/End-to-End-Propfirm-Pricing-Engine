@@ -1,7 +1,7 @@
 # End-to-End-Propfirm-Pricing-Engine
 
 
-# PropFirm Pricing & Execution Engine
+### PropFirm Pricing & Execution Engine
 
 A quantitative research and execution framework modeling Proprietary Trading Firm evaluations as **exotic path-dependent options**.
 
