@@ -1,1 +1,48 @@
+# ==========================================
+# ENVIRONNEMENT PYTHON & CACHE
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
 
+# ==========================================
+# VARIABLES D'ENVIRONNEMENT & SÉCURITÉ (CRITIQUE)
+# ==========================================
+.env
+.env.*
+secrets.json
+credentials/
+
+# ==========================================
+# DONNÉES DE MARCHÉ & BASES DE DONNÉES
+# ==========================================
+data/
+*.csv
+*.dat
+*.out
+*.parquet
+*.h5
+*.sqlite3
+*.db
+
+# ==========================================
+# JUPYTER NOTEBOOKS
+# ==========================================
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ==========================================
+# IDE & OS (Fichiers systèmes)
+# ==========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
