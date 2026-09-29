@@ -66,3 +66,29 @@ if __name__ == "__main__":
     # Scénario C : Quant avec un léger Edge (Dérive positive)
     res_positive = pricer.evaluate_two_step_prop_firm(t1, t2, loss, mu=0.001, sigma=0.01)
     print("Quant Edge (mu=0.001) :", res_positive)
+
+
+
+
+def evaluate_two_step_prop_firm(self, target_1: float, target_2: float, max_loss_global: float, max_loss_daily: float, mu: float, sigma: float) -> dict:
+        """
+        Calcule la probabilité de réussite globale en intégrant la dominance de la barrière journalière.
+        """
+        # La barrière effective qui tue le trader au démarrage est la barrière journalière.
+        effective_loss_barrier = min(max_loss_global, max_loss_daily)
+        
+        # Phase 1 : Objectif vs Barrière effective
+        p_phase1 = self.hitting_probability(target_1, effective_loss_barrier, mu, sigma)
+        
+        # Phase 2 : Objectif réduit vs Barrière effective
+        p_phase2 = self.hitting_probability(target_2, effective_loss_barrier, mu, sigma)
+        
+        # Option Composée : Produit des probabilités
+        p_global = p_phase1 * p_phase2
+        
+        return {
+            "Barriere_Effective": effective_loss_barrier,
+            "P(Phase 1)": round(p_phase1, 4),
+            "P(Phase 2)": round(p_phase2, 4),
+            "P(Global_Funding)": round(p_global, 4)
+        }
